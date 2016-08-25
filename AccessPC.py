@@ -22,7 +22,7 @@ def handle(msg):
        else:
           os.chdir(message[3:])
           bot.sendMessage(chat_id, 'Changed directory to ' + message[3:])
-    elif message.split(' ')[0] == 'upload':
+    elif message.split(' ')[0] == 'download':
        path = message[7:]
        with open(path, 'r') as f:
           bot.sendDocument(chat_id, f.read())
